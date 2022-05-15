@@ -1,4 +1,4 @@
-//api.mapkey('<Space>', 'Choose a tab with omnibar', function() {
+
 //    api.Front.openOmnibar({type: "Tabs"});
 //});
 //api.mapkey('s', '#1Display hints to focus scrollable elements', function() {
@@ -64,3 +64,4 @@ api.unmap(';fs');
 //     font-size: 20pt;
 // }`;
 // click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y> 
+
