@@ -1,6 +1,10 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 live_config_reload: true
 
+env:
+  TERM: xterm-256color
+  # TERM: alacritty
+
 # The FreeType rasterizer needs to know the device DPI for best results
 dpi:
   x: 96
@@ -160,4 +164,9 @@ key_bindings:
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
 # Shell
 # You can set this to a path to your favorite shell, e.g. /bin/fish
-shell: /bin/zsh
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c 
+    - "source ~/.zshrc; tmux attach 2> /dev/null || tmux"
