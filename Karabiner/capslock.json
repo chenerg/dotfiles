@@ -1,7 +1,7 @@
 {
   "title": "Capslock edited by chener",
   "author": "chener",
-  "repo": "https://github.com/Vonng/Capslock",
+  "repo": "best import with karabiner://karabiner/assets/complex_modifications/import?url=file:///(path)",
   "rules": [
     {
       "description": "CapsLock to Hyper",
@@ -725,7 +725,7 @@
         }
       ]
     },
-    { 
+    {
       "description": "Hyper Deletion",
       "manipulators": [
         {
