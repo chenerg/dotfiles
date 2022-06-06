@@ -279,68 +279,7 @@
           ]
         },
         {
-          "description": "command + j = shift + down",
-          "type": "basic",
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "option + command + j = option + shift + down (select para ahead)",
-          "type": "basic",
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
-            },
-            {
-              "key_code": "down_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
-            },
-            {
-              "key_code": "down_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "control + j = ctrl + down (focus application)",
+          "description": "control + j = ctrl + down (show desktop)",
           "type": "basic",
           "from": {
             "key_code": "j",
@@ -547,80 +486,6 @@
           ]
         },
         {
-          "description": "command + u = shift + page_up",
-          "type": "basic",
-          "from": {
-            "key_code": "u",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "page_up",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "option + command + u = shift + page_up",
-          "type": "basic",
-          "from": {
-            "key_code": "u",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "page_up",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "shift + u = option + command + hyphen (zoom out)",
-          "type": "basic",
-          "from": {
-            "key_code": "u",
-            "modifiers": {
-              "mandatory": [
-                "left_shift",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "hyphen",
-              "modifiers": [
-                "left_command",
-                "left_option"
-              ]
-            }
-          ]
-        },
-        {
           "description": "f = f (fullscreen)",
           "type": "basic",
           "from": {
@@ -641,6 +506,26 @@
                 "left_control",
                 "left_command"
               ]
+            }
+          ]
+        },
+        {
+          "description": " d = page_down",
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_down"
             }
           ]
         },
@@ -701,52 +586,6 @@
           "to": [
             {
               "key_code": "end"
-            }
-          ]
-        },
-        {
-          "description": "shift + p = option + command + equal_sign (zoom in)",
-          "type": "basic",
-          "from": {
-            "key_code": "p",
-            "modifiers": {
-              "mandatory": [
-                "left_shift",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "equal_sign",
-              "modifiers": [
-                "left_command",
-                "left_option"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "control + p = LaunchPad",
-          "type": "basic",
-          "from": {
-            "key_code": "p",
-            "modifiers": {
-              "mandatory": [
-                "left_control",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Launchpad'"
             }
           ]
         },
@@ -870,7 +709,7 @@
           "description": "shift + s = sleep",
           "type": "basic",
           "from": {
-            "key_code": "w",
+            "key_code": "s",
             "modifiers": {
               "mandatory": [
                 "left_shift",
@@ -914,13 +753,13 @@
           ]
         },
         {
-          "description": "option + e = edge",
+          "description": "command + v = vscode",
           "type": "basic",
           "from": {
-            "key_code": "e",
+            "key_code": "v",
             "modifiers": {
               "mandatory": [
-                "left_option",
+                "left_command",
                 "right_command",
                 "right_control",
                 "right_shift",
@@ -930,7 +769,28 @@
           },
           "to": [
             {
-              "shell_command": "open -a Microsoft Edge"
+              "shell_command": "open -a 'Visual Studio Code'"
+            }
+          ]
+        },
+        {
+          "description": "command + e = edge",
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Microsoft Edge'"
             }
           ]
         }
@@ -940,7 +800,7 @@
       "description": "Hyper Terminal",
       "manipulators": [
         {
-          "description": "v = ctrl-v",
+          "description": "v = ctrl-v; for vim user",
           "type": "basic",
           "from": {
             "key_code": "v",
@@ -963,7 +823,7 @@
           ]
         },
         {
-          "description": "b = ctrl-b",
+          "description": "b = ctrl-b; for tmux user",
           "type": "basic",
           "from": {
             "key_code": "b",
