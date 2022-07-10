@@ -1,29 +1,73 @@
-
+//api.mapkey('<Space>', 'Choose a tab with omnibar', function() {
 //    api.Front.openOmnibar({type: "Tabs"});
 //});
 //api.mapkey('s', '#1Display hints to focus scrollable elements', function() {
 //    Hints.create(Normal.refreshScrollableElements(), Hints.dispatchMouseClick);
 //});
+//api.setProxy(127.0.0.1:7890)
+api.addSearchAlias('t', 'twitter', 'https://twitter.com/search?q=');
+api.addSearchAlias('z', 'zhihu', 'https://www.zhihu.com/search?type=content&q=', 's', 'https://www.zhihu.com/api/v4/search/suggest?q=', function(response) {
+    var res = JSON.parse(response.text).suggest;
+    return res.map(function(r){
+        return r.query;
+    });
+});
+api.removeSearchAlias('b');
+api.addSearchAlias('b', 'bilibili', 'https://search.bilibili.com/all?keyword=', 's', 'https://s.search.bilibili.com/main/suggest?func=suggest&suggest_type=accurate&sub_type=tag&main_ver=v1&highlight=&upuser_num=3&term=?', function(response) {
+    var res = JSON.parse(response.text).result.tag;
+    return res.map(function(r){
+        return r.value;
+    });
+   }, 
+   {favicon_url: 'https://www.bilibili.com/favicon.ico'}
+);
 
-settings.scrollStepSize = 240;
 
+api.Front.registerInlineQuery({
+    url: function(q) {
+        return `http://dict.youdao.com/w/eng/${q}/#keyfrom=dict2.index`;
+    },
+    parseResult: function(res) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(res.text, "text/html");
+        var collinsResult = doc.querySelector("#collinsResult");
+        var authTransToggle = doc.querySelector("#authTransToggle");
+        var examplesToggle = doc.querySelector("#examplesToggle");
+        if (collinsResult) {
+            collinsResult.querySelectorAll("div>span.collinsOrder").forEach(function(span) {
+                span.nextElementSibling.prepend(span);
+            });
+            collinsResult.querySelectorAll("div.examples").forEach(function(div) {
+                div.innerHTML = div.innerHTML.replace(/<p/gi, "<span").replace(/<\/p>/gi, "</span>");
+            });
+            var exp = collinsResult.innerHTML;
+            return exp;
+        } else if (authTransToggle) {
+            authTransToggle.querySelector("div.via.ar").remove();
+            return authTransToggle.innerHTML;
+        } else if (examplesToggle) {
+            return examplesToggle.innerHTML;
+        }
+    }
+});
+
+api.map('s', ';fs'); //添加s用于选择scroll element 
 api.map('L', 'R'); // L、H 控制tab切换，J、K控制前进后退
 api.map('H', 'E');
 api.map('J', 'S');
 api.map('K', 'D');  
 api.map('^', '<Ctrl-6>');  
 api.map('F', 'C'); // 后台打开新标签页
-api.map('s', ';fs'); //添加s用于选择scroll element 
-
+api.map('w', 'cS'); // 将w映射到重置scroll 目标
 
 // remove some keys
-api.unmap('R');
-api.unmap('E');
+// api.unmap('R');
+// api.unmap('E');
 api.unmap('S');
 api.unmap('D');
 api.map('D', 'P'); // D 设置为下滑一页，对应的是U 
 api.unmap('C');
-api.unmap(';fs');
+//api.unmap(';fs');
 
 // // set theme
 // settings.theme = `
@@ -63,4 +107,4 @@ api.unmap(';fs');
 // #sk_status, #sk_find {
 //     font-size: 20pt;
 // }`;
-// click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y> 
+// click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y>
