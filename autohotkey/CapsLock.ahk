@@ -29,8 +29,6 @@
 ;=====================================================================o
 
 
-;=====================================================================o
-;                            Windows Editor                         ;|
 ;-----------------------------------o---------------------------------o
 ;                     Windows + z  |  Ctrl + z (Cancel)             ;|
 ;                     Windows + x  |  Ctrl + x (Cut)                ;|
@@ -81,7 +79,6 @@ KeyWait, ``                                                          ;|
 return                                                               ;|
 ;---------------------------------------------------------------------o
 
-
 ;=====================================================================o
 ;                         CapsLock Escaper:                          ;|
 ;----------------------------------o----------------------------------o
@@ -107,7 +104,7 @@ if GetKeyState("control") = 0                                        ;|
         if GetKeyState("shift") = 0
             Send, {Left}                                                 ;|
         else
-            Send, ^{Tab}
+            Send, ^+{Tab}
     else                                                             ;|
         Send, +{Left}                                                ;|
     return                                                           ;|
@@ -165,7 +162,7 @@ if GetKeyState("control") = 0                                        ;|
         if GetKeyState("shift") = 0
             Send, {Right}                                                ;|
         else
-            Send, ^+{Tab}
+            Send, ^{Tab}
     else                                                             ;|
         Send, +{Right}                                               ;|
     return                                                           ;|
@@ -400,3 +397,8 @@ CapsLock & 3:: Send,{F10}                                            ;|
 CapsLock & 4:: Send,{F11}                                            ;|
 CapsLock & 5:: Send,+{F5}                                            ;|
 ;---------------------------------------------------------------------o
+
+
+; for k6 keychron
++ESC:: Send, ~
+$ESC:: Send, ``  ;$ used for not recursively redirect
