@@ -1,0 +1,139 @@
+{
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.fontSize": 14,
+    "files.autoSave": "onFocusChange",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "terminal.integrated.inheritEnv": false,
+    "workbench.sideBar.location": "left",
+    "tabnine.experimentalAutoImports": true,
+    "clangd.path": "/Users/chenzhi/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/13.0.0/clangd_13.0.0/bin/clangd",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.wordWrap": "on",
+    "python.showStartPage": false,
+    "editor.tabCompletion": "on",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {},
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "jupyter.sendSelectionToInteractiveWindow": false,
+    "jupyter.alwaysTrustNotebooks": true,
+    "terminal.integrated.macOptionIsMeta": true,
+    "window.restoreFullscreen": true,
+    "window.newWindowDimensions": "fullscreen",
+    "leetcode.workspaceFolder": "/Users/chenzhi/.leetcode",
+    "leetcode.endpoint": "leetcode",
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.hint.commandShortcut": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "cSpell.userWords": [
+        "argmin",
+        "cnns",
+        "convolutional",
+        "ddvo",
+        "disp",
+        "dorn",
+        "egpaper",
+        "eigen",
+        "epipolar",
+        "finetuned",
+        "iccv",
+        "intrinsics",
+        "karsch",
+        "kitti",
+        "kuznietsov",
+        "laina",
+        "mnet",
+        "monodepth",
+        "pointcloud",
+        "pretrain",
+        "reprojection",
+        "resnet",
+        "rmse",
+        "s",
+        "sota",
+        "ss",
+        "ssgm",
+        "ssim",
+        "stereodepth",
+        "unet",
+        "upsampled",
+        "upsampling",
+        "velodyne",
+        "zhou"
+    ],
+    /* for c/c++ setup */
+    /*-------------------- GLOBAL EDITOR CONFIGURATIONS -------------------------*/
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.errorSquiggles": "Disabled",
+    //clangd
+    "clangd.arguments": [
+        "--background-index",
+        "--clang-tidy",
+        "--header-insertion=never",
+        "--suggest-missing-includes",
+        "--compile-commands-dir=build/"
+    ],
+    "cmake.autoSelectActiveFolder": false,
+    "cmake.buildBeforeRun": false,
+    "cmake.clearOutputBeforeBuild": false,
+    "cmake.configureOnEdit": false,
+    "explorer.confirmDelete": false,
+    "editor.formatOnSave": true,
+    "cmake.configureOnOpen": true,
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "python.languageServer": "None",
+    "gitlens.advanced.messages": {
+        "suppressImproperWorkspaceCasingWarning": true
+    },
+    "workbench.preferredDarkColorTheme": "Monokai",
+    "window.autoDetectColorScheme": true,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "vim.cursorStylePerMode.normal": "block-outline",
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.whichwrap": "b,s,<,>,[,],h,l",
+    "editor.wordSeparators": "-,.",
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "after": [
+                ">",
+                "g",
+                "v"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "after": [
+                "<",
+                "g",
+                "v"
+            ]
+        },
+    ],
+    "window.zoomLevel": 1,
+    "editor.lineNumbers": "relative",
+}
