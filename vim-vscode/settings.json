@@ -102,16 +102,16 @@
     },
     "workbench.preferredDarkColorTheme": "Monokai",
     "window.autoDetectColorScheme": true,
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Default Light+",
     "workbench.preferredLightColorTheme": "Solarized Light",
-    "vim.cursorStylePerMode.normal": "block-outline",
+    "vim.cursorStylePerMode.normal": "block",
     "vim.easymotion": true,
     "vim.leader": " ",
     "vim.smartRelativeLine": true,
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true,
     "vim.whichwrap": "b,s,<,>,[,],h,l",
-    "editor.wordSeparators": "-,.",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
     "vim.visualModeKeyBindings": [
         {
             "before": [
@@ -136,4 +136,5 @@
     ],
     "window.zoomLevel": 1,
     "editor.lineNumbers": "relative",
+    "editor.cursorBlinking": "solid",
 }
